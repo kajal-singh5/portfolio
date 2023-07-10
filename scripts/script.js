@@ -1,5 +1,5 @@
-// Moving gradient for hero section
-const gradientBorder = document.querySelector('.hero-wrapper');
+// Moving gradient for hero & profile section
+const gradientBorder = document.querySelector('.gradient');
 let angle = 55;
 
 function incrementAngle() {
