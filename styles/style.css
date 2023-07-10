@@ -46,7 +46,14 @@ a {
     cursor: url("../assets/hand.svg"), auto;
 }
 
-div>img {
+button {
+    background-color: transparent;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+*>img {
     max-width: 100%;
     object-fit: cover;
     object-position: center;
@@ -316,6 +323,46 @@ div>img {
 
 .project .stars.two {
     animation-delay: 2s;
+}
+
+/* NAVIGATION */
+.nav {
+    position: relative;
+}
+
+.nav img {
+    /* dimensions */
+    max-width: 3rem;
+    max-height: 3rem;
+}
+
+.open-map {
+    /* display */
+    display: block;
+
+    /* position */
+    position: fixed;
+    right: 2%;
+    z-index: 9999;
+}
+
+.map {
+    display: none;
+    background-image: url("../assets/nav/map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 5rem;
+}
+
+.open-map {
+    margin: 10rem;
+}
+
+.close-map {
+    margin: 10rem;
 }
 
 /* || LOADING SCREEN */

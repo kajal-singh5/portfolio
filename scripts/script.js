@@ -24,3 +24,24 @@ setTimeout(() => {
     const div2 = document.querySelector('.main-content');
     div2.style.display = 'block';
 }, 6000);
+
+// Map
+const openModalButton = document.querySelector('.open-map');
+const closeModalButton = document.querySelector('.close-map');
+const modal = document.querySelector('.map');
+
+openModalButton.addEventListener('click', function () {
+    modal.style.display = 'block';
+});
+
+closeModalButton.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+modal.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+
