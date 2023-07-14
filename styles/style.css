@@ -47,7 +47,7 @@
     --button-font-weight: 400;
     --button-font-size: 1.5rem;
     --button-line-height: 2rem;
-    --button-font-family: var(var(--font-family-display));
+    --button-font-family: var(--font-family-display);
     --button-text-align: center;
     --button-text-transform: uppercase;
     --button-color: var(--color-accent);
@@ -319,22 +319,100 @@ button {
 /* Buttons */
 .button {
     /* display */
-    border-radius: 0.625rem;
-    background: var(--color-dark-neutral);
-    box-shadow: var(--button-box-shadow);
-    cursor: url("../assets/hand.svg"), auto;
+    background-color: var(--color-dark-neutral);
+    box-shadow: 6px 6px 0px 0px #FFD600, 7px 7px 0px 0px #000;
+    border-radius: 0.5rem;
     padding: 1rem 2.5rem;
-    overflow: hidden;
+    
+    /* position */
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
 
     /* dimensions */
     width: 100%;
-
+    
+    /* animation */
+    transition: all .15s linear 0s;
+    
     /* text */
-    font: var(--button);
-    color: var(--button-color);
+    font-family: var(--button-font-family);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
     text-align: var(--button-text-align);
-    text-transform: var(--button-text-transform);
+    text-decoration: none;
     text-shadow: var(--text-shadow-blue);
+    text-transform: var(--button-text-transform);
+    color: var(--button-color);
+    line-height: var(--button-line-height);
+    letter-spacing: var(--font-letter-spacing-h);
+}
+
+.button:hover {
+    top: 1px;
+    left: 1px;
+    box-shadow: 5px 5px 0px 0px #FFD600, 6px 6px 0px 0px #000;
+}
+
+.button:hover::after {
+    bottom: -2px;
+    left: 0px;
+    width: 10px;
+    height: 7px;
+}
+
+.button:hover::before {
+    top: 3px;
+    right: -5px;
+    width: 10px;
+    height: 8px;
+}
+
+.button::after {
+    transition: all .15s linear 0s;
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+    width: 12px;
+    height: 8px;
+    background-color: #FFD600;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.button::before {
+    transition: all .15s linear 0s;
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: -6px;
+    width: 12px;
+    height: 8px;
+    background-color: #FFD600;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.button:active {
+    top: 7px;
+    left: 7px;
+    box-shadow: none;
+}
+
+.button:active::before {
+    top: 1px;
+    right: 1px;
+    width: 0px;
+    height: 0px;
+}
+
+.button:active::after {
+    bottom: 2px;
+    left: 0px;
+    /* width: 0px; */
+    /* height: 0px; */
 }
 
 /* Blinking stars */
@@ -394,10 +472,14 @@ button {
 }
 
 .nav-button {
+    position: relative;
+    top: 0;
     width: 5rem;
     height: 5rem;
-    background-image: linear-gradient(174deg, rgba(217, 217, 217, 0.09) 0%, rgba(217, 217, 217, 0.23) 23.56%, rgba(217, 217, 217, 0.10) 54.08%, rgba(217, 217, 217, 0.17) 74.62%, rgba(217, 217, 217, 0.08) 100%), linear-gradient(168deg, rgba(217, 217, 217, 0.14) 0%, rgba(217, 217, 217, 0.23) 23.56%, rgba(217, 217, 217, 0.15) 54.08%, rgba(217, 217, 217, 0.20) 74.62%, rgba(217, 217, 217, 0.11) 100%);
-    box-shadow: 0px -8px 0px 0px #412220 inset, 0px 14px 0px 0px rgba(65, 34, 32, 0.15) inset, 0px 8px 0px 0px rgba(65, 34, 32, 0.26) inset;
+    background-image: linear-gradient(174deg, #d9d9d917 0%, #d9d9d93b 23.56%, #d9d9d91a 54.08%, #d9d9d92b 74.62%, #d9d9d914 100%), linear-gradient(168deg, #d9d9d924 0%, #d9d9d93b 23.56%, #d9d9d926 54.08%, #d9d9d933 74.62%, #d9d9d91c 100%);
+    box-shadow: 0px 8px 0px 0px #412220, 
+    0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
     border-radius: 0.75rem / 1.5rem;
     cursor: url("../assets/hand.svg"), auto;
 }
@@ -407,20 +489,18 @@ button {
     transition: opacity 0.5s ease-in;
 }
 
-.nav-button img:last-child {
-    height: 0;
-    opacity: 0;
+.nav-button:hover,
+.nav-button:focus {
+    top: 4px;
+    box-shadow: 0px 4px 0px 0px #412220,
+    0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
 }
 
-.nav-button:hover img:first-child {
-    opacity: 0;
-    height: 0;
-}
-
-.nav-button:hover img:last-child {
-    opacity: 1;
-    height: 60%;
-    left: -1%;
+.nav-button:active {
+    top: 8px;
+    box-shadow: 0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
 }
 
 /* Opening map button */
@@ -440,13 +520,13 @@ button {
 
 /* Map */
 .modal {
-    /* positioin */
+    /* position */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1111;
 
-    /* dimensioins */
+    /* dimensions */
     width: 100vw;
     height: 100vh;
 
@@ -498,6 +578,20 @@ button {
     top: -5%;
     right: -10%;
     z-index: 1000;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    top: -4%;
+    box-shadow: 0px 4px 0px 0px #412220,
+    0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
+}
+
+.close-modal:active {
+    top: -3%;
+    box-shadow: 0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
 }
 
 /* Page links */
@@ -925,7 +1019,7 @@ button {
 
 .project .section-heading {
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     transition: transform 1s ease-in;
     animation: move-in-right 2s ease-in-out forwards, idle 3s ease-in infinite;
     animation-delay: 0s, 2s;
@@ -1147,7 +1241,7 @@ hr {
 
 .blogs .section-heading {
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     transition: transform 1s ease-in;
     animation: move-in-left 2s ease-in-out forwards, idle 3s ease-in infinite;
     animation-delay: 0s, 2s;
@@ -1323,7 +1417,7 @@ hr {
 
 .about .section-heading {
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     transition: transform 1s ease-in;
     animation: idle 3s ease-in infinite;
     animation-delay: 0s, 2s;
@@ -1366,11 +1460,21 @@ hr {
 .about .first {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     width: 40%;
     height: 100%;
+}
+
+.about .first .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
 }
 
 .about .photo-wrapper {
@@ -1393,15 +1497,18 @@ hr {
 .about .social {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1rem;
+}
+
+.about .social > div {
+    height: 5rem;
+    transition: height 0.25s ease-in-out;
 }
 
 .about .social div:hover,
 .about .social div:focus {
-    transform: scale(0.8);
+   height: 6.5rem;
 }
 
 .about .social img {
@@ -1471,8 +1578,8 @@ hr {
     grid-template-areas: 
     ". . . . . ."
     "b b b . . ."
-    "b b b . c c"
-    "b b b . c c"
+    "b b b . . ."
+    "b b b . . c" 
     "g g g g g g"
     "g g g g g g";
 }
@@ -1545,6 +1652,18 @@ hr {
         font-size: 12px;
     }
 
+    .project .section-heading {
+        height: 12vh;
+    }
+
+    .blogs .section-heading {
+        height: 12vh;
+    }
+
+    .about .section-heading {
+        height: 12vh;
+    }
+
     .project {
         height: 150vh;
     }
@@ -1564,5 +1683,9 @@ hr {
 
     .project .project-description {
         height: 60%;
+    }
+
+    .about .social {
+        flex-direction: column;
     }
 }
