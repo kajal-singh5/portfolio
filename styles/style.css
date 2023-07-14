@@ -552,8 +552,8 @@ button {
 /* Map contents only */
 .modal-content {
     /* dimensions */
-    width: 60%;
-    height: 75%;
+    width: 80%;
+    height: 80%;
 
     /* position */
     z-index: 5;
@@ -576,7 +576,7 @@ button {
     height: 10%;
     position: relative;
     top: -5%;
-    right: -10%;
+    right: 5%;
     z-index: 1000;
 }
 
@@ -596,7 +596,7 @@ button {
 
 /* Page links */
 .internal-links {
-    width: 100%;
+    width: 80%;
     height: 60%;
     display: flex;
     flex-direction: row;
@@ -649,15 +649,15 @@ button {
 
 /* Page buttons */
 .external-links {
-    width: 100%;
+    width: 80%;
     height: 10%;
 
     /* content */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: flex-start;
     overflow: visible;
+    gap: 1rem;
 }
 
 .external-links a {
@@ -666,17 +666,17 @@ button {
     border: 4px solid #301F23;
     background: #69A5C9;
     box-shadow: 0px 12px 0px 0px #6DABD0 inset, 0px 10px 0px 0px #74B4DB inset, 0px 6px 0px 0px #BBDCEE inset, 0px -8px 0px 0px #636A7F inset;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
 
     /* text */
     color: var(--color-accent);
     text-align: var(--text-align-center);
     text-shadow: var(--text-shadow-blue);
     font-family: var(--font-family-body);
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-h);
     text-transform: var(--text-transform-uppercase);
-    letter-spacing: 3.6px;
+    letter-spacing: var(--font-letter-spacing-p);
     text-decoration: none;
 
     /* contents */
@@ -1687,5 +1687,21 @@ hr {
 
     .about .social {
         flex-direction: column;
+    }
+
+    .modal-gif.opening,
+    .modal-gif.closing {
+        display: none;
+    }
+
+    .hero .cloud > *,
+    .hero .hero-tagline .li-img,
+    .project .section-heading,
+    .project .desc-group img,
+    .blogs .section-heading,
+    .about .section-heading,
+    .footer .to-top:hover,
+    .footer .to-top:active {
+        animation-play-state: paused;
     }
 }
