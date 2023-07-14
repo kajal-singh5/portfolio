@@ -1,4 +1,4 @@
-// Moving gradient for hero & profile section
+// Moving gradient for hero
 const gradientBorder = document.querySelector('.gradient');
 let angle = 55;
 
@@ -25,23 +25,41 @@ setTimeout(() => {
     div2.style.display = 'block';
 }, 6000);
 
-// Map
-const openModalButton = document.querySelector('.open-map');
-const closeModalButton = document.querySelector('.close-map');
-const modal = document.querySelector('.map');
 
-openModalButton.addEventListener('click', function () {
-    modal.style.display = 'block';
+// MAP
+const openModalButton = document.querySelector('.open-modal');
+const closeModalButton = document.querySelector('.close-modal');
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content');
+const modalGifOpening = document.querySelector('.modal-gif.opening');
+const modalGifClosing = document.querySelector('.modal-gif.closing');
+
+openModalButton.addEventListener('click', function() {
+  modalGifOpening.src = './assets/nav/open-modal4.gif';
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  modalGifOpening.style.opacity = '0.95';
+
+  setTimeout(function() {
+    modalContent.style.opacity = '1';
+  }, 1000);
+
 });
 
-closeModalButton.addEventListener('click', function () {
+closeModalButton.addEventListener('click', function() {
+  modalGifClosing.src = './assets/nav/close-modal4.gif';
+  modalGifOpening.style.opacity = '0';
+  modalGifClosing.style.opacity = '0.95';
+  
+  setTimeout(function() {
+    modalContent.style.opacity = '0';
+  }, 200);
+
+  setTimeout(function() {
+    modalGifClosing.style.opacity = '0';
+    modalGifOpening.src = './assets/nav/open-modal4.gif';
     modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }, 1500);
+
 });
-
-modal.addEventListener('click', function (event) {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-
-

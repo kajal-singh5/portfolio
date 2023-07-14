@@ -25,25 +25,44 @@
     </div>
     <div class="main-content">
         <nav id="nav" class="nav">
-            <div class="open-map">
-                <button type="button"><img src="./assets/nav/dots.png" alt="Collapsed navigation"></button>
+            <div class="modal">
+                <div class="modal-content">
+                    <button class="close-modal nav-button">
+                        <img src="./assets/nav/close.svg" alt="">
+                        <img src="./assets/nav/close.svg" alt="">
+                    </button>
+                    <div class="internal-links">
+                        <a href="">Home</a>
+                        <a href="">Projects</a>
+                        <a href="">Blogs</a>
+                        <a href="">About me</a>
+                    </div>
+                    <div class="external-links">
+                        <a href="">
+                            <span>Resume</span>
+                            <img src="./assets/nav/download.svg" alt="Download Icon">
+                        </a>
+                        <a href="">
+                            <span>Github</span>
+                            <img src="./assets/nav/github.svg" alt="GitHub Logo">
+                        </a>
+                        <a href="">
+                            <span>LinkedIn</span>
+                            <img src="./assets/nav/linkedIn.svg" alt="LinkedIn Logo">
+                        </a>
+                    </div>
+                </div>
+                <img class="modal-gif opening" src="./assets/nav/open-modal4.gif" alt="Open Modal GIF">
+                <img class="modal-gif closing" src="./assets/nav/close-modal4.gif" alt="Close Modal GIF">
             </div>
-            <div class="map">
-                <div class="map-links">
-                    <a href="#">Home</a>
-                    <a href="#project-1">Projects</a>
-                    <a href="#blogs">Blogs</a>
-                    <a href="#about">About me</a>
-                </div>
-                <div class="map-buttons">
-                    <button class="button" type="button">Resume</button>
-                    <button class="button" type="button">Github</button>
-                    <button class="button" type="button">LinkedIn</button>
-                </div>
-                <div class="close-map">
-                    <button type="button"><img src="./assets/nav/close.png" alt="Collapsed navigation"></button>
-                </div>
-            </div>
+            <button class="open-modal nav-button">
+                <img src="./assets/nav/bars.svg" alt="">
+                <img src="./assets/nav/question.svg" alt="">
+            </button>
+            <button class="home nav-button">
+                <img src="./assets/nav/home-1.svg" alt="">
+                <img src="./assets/nav/home-2.svg" alt="">
+            </button>
         </nav>
         <section id="hero" class="hero">
             <div class="bg stars one">
