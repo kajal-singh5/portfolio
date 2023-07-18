@@ -1,0 +1,193 @@
+/* || ANIMATIONS */
+
+/* To rotate objects */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* For stars */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* To move clouds on the left */
+@keyframes moving-clouds-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(80vw);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+/* To move clouds on the right */
+@keyframes moving-clouds-right {
+    0% {
+        transform: translateX(0);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateX(30vw);
+        opacity: 1;
+    }
+
+    51% {
+        transform: translateX(40vw);
+        opacity: 0;
+    }
+
+    52% {
+        opacity: 0;
+    }
+
+    53% {
+        transform: translateX(-110vw);
+        opacity: 0;
+    }
+
+    54% {
+        transform: translateX(-100vw);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+/* To flip pixel item */
+@keyframes flip {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* For header movement from right */
+@keyframes move-in-right {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+/* For header movement from left */
+@keyframes move-in-left {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+/* For header movement from bottom */
+@keyframes move-in-bottom {
+    from {
+        transform: translateY(50vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+
+/* Idle sprite animation */
+@keyframes idle {
+    0% {
+        transform: rotate(1deg);
+    }
+
+    50% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+/* Loading screen */
+@keyframes loading-cursor {
+    0% {
+        cursor: url("../assets/loading/loader.png"), auto;
+    }
+
+    20% {
+        cursor: url("../assets/loading/loader-1.png"), auto;
+    }
+
+    40% {
+        cursor: url("../assets/loading/loader-2.png"), auto;
+    }
+
+    50% {
+        cursor: url("../assets/loading/loader-3.png"), auto;
+    }
+
+    60% {
+        cursor: url("../assets/loading/loader-4.png"), auto;
+    }
+
+    100% {
+        cursor: url("../assets/loading/loader-5.png"), auto;
+    }
+}
+
+/* To shrink loading-bar */
+@keyframes skip {
+    0% {
+        height: 100vh;
+        opacity: 100;
+    }
+
+    100% {
+        height: 0vh;
+        opacity: 0;
+    }
+}
+
+.slide-up {
+    animation: slide 1s forwards;
+}
+
+@keyframes slide {
+    to {
+        transform: translateY(-100%);
+    }
+}

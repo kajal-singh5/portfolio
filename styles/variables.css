@@ -1,0 +1,56 @@
+/* || VARIABLES */
+:root {
+
+    /* Text styling */
+    --font-family-display: '04b03';
+    --font-family-body: 'NotJamSlabSerif1';
+
+    --font-size-h1: 3rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-body: 1.25rem;
+    
+    --font-line-height-h: 2rem;
+    --font-line-height-body: 1.5rem;
+
+    --font-weight-h: 500;
+    --font-weight-body: 400;
+
+    --font-letter-spacing-h: 0.2rem;
+    --font-letter-spacing-p: 0.075rem;
+
+    --font-style: normal;
+
+    --text-shadow-blue: 2px 2px 0px #0057FF;
+    --text-shadow-white: 2px 2px 0px #FFFDF5;
+
+    --text-transform-uppercase: uppercase;
+    --text-transform-capitalize: capitalize;
+
+    --text-align-center: center;
+
+    /* Color */
+    --color-accent: #FFD600;
+    --color-accent-blue: #00E1FF;
+    --color-dark-neutral: #2D2635;
+    --color-dark-100: #464646;
+    --color-dark-200: #46597D;
+    --color-dark-300: #122A58;
+    --color-white: #FFF;
+    --color-off-white: #FFFDF5;
+
+    /* Extra */
+    --angle: 55deg;
+
+    /* Button styling */
+    --button-font-style: var(--font-style);
+    --button-font-weight: 400;
+    --button-font-size: 1.5rem;
+    --button-line-height: 2rem;
+    --button-font-family: var(--font-family-display);
+    --button-text-align: center;
+    --button-text-transform: uppercase;
+    --button-color: var(--color-accent);
+    --button-box-shadow: 8px 8px 0px 0px var(--color-accent),
+    12px 12px 0px 0px var(--color-dark-neutral);
+}

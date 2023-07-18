@@ -1,0 +1,32 @@
+/* || LOADING SCREEN */
+.loading {
+    cursor: url("../assets/loading/loader.png"), auto;
+    animation: loading-cursor 6s forwards, skip 1s forwards 6s;
+    transition: cursor 1s ease-in-out;
+    overflow: hidden;
+}
+
+.loading .container {
+    /* background */
+    background-color: var(--color-dark-neutral);
+    background-image: linear-gradient(180deg, #171711 0%, #5A457C 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* dimensions */
+    width: 100vw;
+    height: 100vh;
+
+    /* position */
+    position: relative;
+}
+
+.loading .bg:last-child {
+    align-self: flex-end;
+}

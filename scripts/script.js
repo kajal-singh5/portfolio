@@ -27,7 +27,7 @@ setTimeout(() => {
 
 
 // MAP
-const mediaQuery = window.matchMedia("(max-width: 798px)");
+const mediaQuery = window.matchMedia("(max-width: 770px)");
 const openModalButton = document.querySelector('.open-modal');
 const closeModalButton = document.querySelector('.close-modal');
 const modal = document.querySelector('.modal');
