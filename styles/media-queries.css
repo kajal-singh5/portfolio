@@ -105,13 +105,28 @@
     
     /* navigation */
     .close-modal {
-        top: -11%;
-        right: -11%;
+        top: -10%;
+        right: -5%;
+    }
+
+    .close-modal:hover,
+    .close-modal:focus {
+        top: -9%;
+    }
+
+    .close-modal:active {
+        top: -8%;
+    }
+
+    .modal-gif.opening,
+    .modal-gif.closing {
+        display: none;
     }
 
     .internal-links {
         gap: 2rem;
         overflow: visible;
+        flex-direction: column;
     }
 
     .internal-links a {
@@ -123,10 +138,13 @@
         color: var(--color-off-white);
         font-size: var(--font-size-h1);
         overflow: visible;
+
+        align-self: auto;
     }
 
     .internal-links a:hover {
         color: var(--color-accent);
+        box-shadow: none;
     }
 
     /* about */

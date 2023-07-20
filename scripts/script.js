@@ -42,14 +42,11 @@ if (mediaQuery.matches) {
     openModalButton.addEventListener('click', function() {
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        modalContent.style.opacity = '1';
         modalContent.style.display = 'flex';
-        internalLinks.style.flexDirection = 'column';
-        internalLinks.style.alignItems = 'center';
-        for (var i = 0; i < internalLinkItems.length; i++) {
-            var child = internalLinkItems[i];
-            child.style.alignSelf = 'auto';
-        }
+
+        setTimeout(function() {
+            modalContent.style.opacity = '1';
+        }, 100);
     });
 
     closeModalButton.addEventListener('click', function() {
@@ -58,6 +55,15 @@ if (mediaQuery.matches) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     });
+
+    for (var i = 0; i < internalLinkItems.length; i++) {
+        internalLinkItems[i].addEventListener('click', function() {
+            modalContent.style.opacity = '0';
+            modalContent.style.display = 'none';
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        })
+    }
 } else {
     openModalButton.addEventListener('click', function() {
         modalGifOpening.src = './assets/nav/open-modal4.gif';
@@ -88,6 +94,25 @@ if (mediaQuery.matches) {
         }, 1500);
       
     });
+
+    for (var i = 0; i < internalLinkItems.length; i++) {
+        internalLinkItems[i].addEventListener('click', function() {
+            modalGifClosing.src = './assets/nav/close-modal4.gif';
+            modalGifOpening.style.opacity = '0';
+            modalGifClosing.style.opacity = '0.95';
+            
+            setTimeout(function() {
+            modalContent.style.opacity = '0';
+            }, 200);
+        
+            setTimeout(function() {
+            modalGifClosing.style.opacity = '0';
+            modalGifOpening.src = './assets/nav/open-modal4.gif';
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            }, 1500);
+        })
+    }
 }
 
 
