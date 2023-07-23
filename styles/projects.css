@@ -38,7 +38,7 @@
     overflow: visible;
 }
 
-.project.four {
+.project.five {
     background-image: url("../assets/project/bg2.png"), linear-gradient(180deg, #4C86C2 0%, #3B6B9C 50.82%);
 }
 
@@ -161,6 +161,15 @@
 
 #project-4 .project-img:hover {
     background-image: url("../assets/project/weatherApp-hover.png");
+}
+
+#project-5 .project-img {
+    background-image: url("../assets/project/drumKit.png");
+    background-size: cover;
+}
+
+#project-5 .project-img:hover {
+    background-image: url("../assets/project/drumKit-hover.png");
 }
 
 .project .project-description {
