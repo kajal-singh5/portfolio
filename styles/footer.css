@@ -51,7 +51,7 @@
 }
 
 .footer .floating-button {
-    background-image: url("../assets/footer/crab.png");
+    /* background-image: url("../assets/footer/crab.png"); */
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -62,6 +62,13 @@
     bottom: 0;
     right: 2rem;
     z-index: 9999;
+
+    cursor: url("../assets/hand.svg"), auto;
+}
+
+.footer .floating-button:hover,
+.footer .floating-button:focus {
+    animation: idle 1s ease-in infinite;
 }
 
 @media (max-width: 880px) {
