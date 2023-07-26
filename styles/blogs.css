@@ -170,3 +170,24 @@
 .blogs .blog-item:focus {
     background: var(--color-dark-300);
 }
+
+@media (max-width: 770px) {
+    .blogs {
+        background-image: url(../assets/blogs/bg-tablet.png);
+    }
+
+    .blogs .blogs-highlight {
+        width: 70%;
+    }
+
+    .blogs .blogs-more {
+        width: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .blogs {
+        background-image: url("../assets/blogs/bg-mobile.png");
+        display: none;
+    }
+}

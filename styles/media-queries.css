@@ -1,4 +1,10 @@
 /* || MEDIA QUERIES */
+@media (min-width: 993px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 993px) {
     :root {
         --font-size-h3: 1.25rem;
@@ -49,60 +55,10 @@
         font-size: 13px;
     }
 
-    .project .section-heading,
-    .blogs .section-heading,
-    .about .section-heading {
-        height: 10vh;
-    }
-
-    .wip {
-        height: 6vh;
-    }
-    
     .blogs, .project {
-        height: 130vh;
+        height: 150vh;
     }
 
-    /* Project */
-    .project .section-body {
-        height: 100%;
-    }
-
-    .project .project-info {
-        flex-direction: column;
-        gap: 0rem;
-    }
-
-    .project .project-info > * {
-        width: 99%;
-    }
-
-    .project .project-img {
-        box-shadow: none;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        height: 40%;
-    }
-
-    .project .project-description {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        height: 70%;
-    }
-
-    .project .desc-group .desc-item {
-        padding: 0.25rem;
-    }
-
-    /* blogs */
-    .blogs .blogs-highlight {
-        width: 70%;
-    }
-
-    .blogs .blogs-more {
-        width: 30%;
-    }
-    
     /* navigation */
     .close-modal {
         top: -10%;
@@ -146,34 +102,6 @@
         color: var(--color-accent);
         box-shadow: none;
     }
-
-    /* about */
-    .about .first {
-        width: 50%;
-        overflow: visible;
-    }
-
-    .about .intro-card {
-        height: 90%;
-    }
-
-    .about .social {
-        overflow: visible;
-    }
-
-    /* footer */
-    .footer {
-        background-image: url("../assets/footer/background-tablet.svg");
-        max-height: 40rem;
-    }
-
-    .footer .thank-you {
-        bottom: -73%;
-    }
-
-    .footer .to-top {
-        height: 80%;
-    }
 }
 
 @media (max-width: 576px) {
@@ -195,139 +123,5 @@
         gap: 1rem;
         flex-wrap: wrap;
     }
-
-    /* project */
-    .project {
-        background-image: url("../assets/project/bg-mobile-1.png");
-        height: 180vh;
-    }
-
-    .project.three {
-        background-image: url("../assets/project/bg-mobile-2.png");
-    }
-
-    /* blogs */
-    .blogs {
-        background-image: url("../assets/blogs/bg-mobile.png");
-        display: none;
-    }
-
-    /* about */
-    .about {
-        background-image: url("../assets/about/bg-mobile.png");
-        height: 180vh;
-    }
-
-    .about .intro-card {
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        gap: 2rem;
-    }
-
-    .about .first {
-        width: 100%;
-        height: 40%;
-    }
-
-    .about .first .profile-container {
-        gap: 1rem;
-    }
-
-    .about .social div:hover, .about .social div:focus {
-        height: 5.5rem;
-    }
-
-    .about .second {
-        width: 100%;
-    }
-
-
-    /* footer */
-    .footer {
-        background-image: url("../assets/footer/bg-mobile.png");
-    }
-
-    .footer .container {
-        grid-template-areas:
-        ". . . . . ."
-        ". b b b b ."
-        ". b b b b ."
-        ". . c c . ."
-        "g g g g g g"
-        "g g g g g g";
-    }
-
-    .footer .footer-nav {
-        background-image: url("../assets/footer/footer-mobile.svg");
-        background-size: cover;
-        background-position: top;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    .footer .thank-you {
-        display: flex;
-        justify-content: center;
-        bottom: 0;
-    }
-
-    .footer .to-top {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    .footer .thank-you img {
-        height: 100%;
-    }
-
-    /* .hero .hero-tagline .ul {
-        flex-direction: column;
-    }
-
-    .hero .hero-tagline .li {
-        justify-content: center;
-    }
-
-    .blogs .section-body {
-        flex-direction: column;
-        height: 100%;
-    }
-
-    .blogs .blogs-highlight,
-    .blogs .blogs-more {
-        width: 100%;
-        height: 50%;
-        gap: 1rem;
-    }
-    
-    .about .intro-card {
-        flex-direction: column;
-        height: 100%;
-    }
-
-    .about .first {
-        width: 100%;
-        height: 40%;
-        margin: 2rem 0;
-    }
-    
-    .about .second {
-        width: 100%;
-        height: 60%;
-    }
-
-    .about .social {
-        flex-direction: row;
-    }
-
-    .footer img {
-        max-height: 60%;
-    }
-
-    .footer .thank-you {
-        bottom: -78%;
-    } */
 }
 

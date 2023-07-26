@@ -112,3 +112,10 @@
         -webkit-transform: translateX(-200%);
     }
 }
+
+@media (max-width: 576px) {
+    #tech-stack,
+    #email-me {
+        display: none;
+    }
+}

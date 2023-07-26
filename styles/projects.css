@@ -29,12 +29,19 @@
 
     /* dimensions */
     width: 90%;
-    height: 80%;
+    height: 90%;
 
     /* content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 15vh 15vh auto minmax(50vh, 1fr) 15vh;
+    grid-template-columns: 6fr 4fr;
+    grid-template-areas:
+        "plane plane"
+        ". wip"
+        "name name"
+        "img info"
+        "button button";
+    column-gap: 2rem;
     overflow: visible;
 }
 
@@ -43,8 +50,10 @@
 }
 
 .project .section-heading {
+    grid-area: plane;
+    align-self: center;
     width: 100%;
-    height: 15vh;
+    height: 70%;
     transition: transform 1s ease-in;
     animation: move-in-right 2s ease-in-out forwards, idle 3s ease-in infinite;
     animation-delay: 0s, 2s;
@@ -58,9 +67,11 @@
     transform: translate(-50%, -50%);
 }
 
-.wip {
+.project .wip {
+    grid-area: wip;
+    align-self: end;
     width: 100%;
-    height: 8vh;
+    height: 50%;
     text-align: end;
     overflow: hidden;
     padding-right: 2rem;
@@ -76,12 +87,15 @@
 
     /* dimensions */
     width: 100%;
-    height: 85%;
+    height: 75%;
 
     overflow: inherit;
 }
 
 .project .project-name {
+    grid-area: name;
+    margin-bottom: 2rem;
+
     /* display */
     background: var(--color-off-white);
     border-radius: 1rem;
@@ -89,11 +103,10 @@
     box-shadow: 0px 4px 0px 0px #FFF inset,
         0px 8px 0px 0px #FFFAE7 inset,
         0px -8px 0px 0px #BFBEB8 inset;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
 
     /* dimensions */
     width: 100%;
-    height: auto;
 
     /* text */
     color: var(--color-dark-100);
@@ -120,10 +133,12 @@
 }
 
 .project .project-img {
+    grid-area: img;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 60%;
+    width: 100%;
     height: 98%;
     border-radius: 2rem;
     box-shadow: 8px 10px black;
@@ -173,6 +188,8 @@
 }
 
 .project .project-description {
+    grid-area: info;
+
     /* display */
     background: #d9d9d966;
     box-shadow: 0px 4px 15px 0px #ffffff40 inset, 0px 2px 0px 0px #ffffff40 inset;
@@ -180,7 +197,7 @@
     backdrop-filter: blur(0.5rem);
 
     /* dimensions */
-    width: 40%;
+    width: 100%;
     height: 100%;
 
     /* box-sizing */
@@ -251,8 +268,110 @@ hr {
 .project .desc-group .p {
     width: 90%;
     color: var(--color-white);
-    font-size: var(--font-family-body);
+    font-size: var(--font-size-body);
     line-height: var(--font-line-height-h);
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.project .project-links {
+    grid-area: button;
+    display: grid;
+    grid-template: 1fr / repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+/* || MEDIA */
+@media(max-width: 770px) {
+    .project {
+        background-image: url("../assets/project/bg-tablet.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 160vh;
+    }
+
+    .project .container {
+        display: grid;
+        grid-template-rows: 15vh 10vh max-content 1fr 1.5fr min-content;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "plane"
+            "wip"
+            "name"
+            "img"
+            "info"
+            "button";
+    }
+
+    .project .project-name {
+        margin-bottom: 1rem;
+    }
+
+    .project .project-img {
+        box-shadow: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .project .project-description {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 1rem;
+    }
+
+    .project .desc-group .desc-item {
+        padding: 0.25rem;
+    }
+
+    .project .project-links {
+        margin-top: 0%;
+    }
+
+    .project .project-links button {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project {
+        background-image: url("../assets/project/bg-mobile-1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 180vh;
+    }
+
+    .project.five {
+        background-image: url("../assets/project/bg-mobile-2.png");
+    }
+}
+
+@media (max-width: 445px) {
+    .project .container {
+        display: grid;
+        grid-template-rows: 15vh 10vh max-content 1fr min-content;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "plane"
+            "wip"
+            "name"
+            "img"
+            "button";
+    }
+
+    .project .project-description {
+        display: none;
+    }
+    
+    .project .project-img {
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    .project .project-links {
+        row-gap: 1rem;
+    }    
 }

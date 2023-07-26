@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/media-queries.css">
 
+    <script src="https://kit.fontawesome.com/ec8b320dc9.js" crossorigin="anonymous"></script>
+
+    <script src="./scripts/script.js" defer></script>
+
     <title>Kajal Singh</title>
 </head>
 
@@ -51,7 +55,8 @@
                         <a href="#about">About me</a>
                     </div>
                     <div class="external-links">
-                        <a href="https://drive.google.com/file/d/1cUnfhrw9cKXWp7pwfDmKvVe8lLGfWun2/view?usp=drive_link" target="_blank">
+                        <a href="https://drive.google.com/file/d/1cUnfhrw9cKXWp7pwfDmKvVe8lLGfWun2/view?usp=drive_link"
+                            target="_blank">
                             <span>Resume</span>
                             <img src="./assets/nav/download.svg" alt="Download Icon">
                         </a>
@@ -131,9 +136,9 @@
                 <div class="hero-selection">
                     <h3 class="h3">Scroll below to see</h3>
                     <ul class="ul">
-                        <li class="li">Projects</li>
-                        <li class="li">Blogs</li>
-                        <li class="li">About me</li>
+                        <li class="li"><a href="#project-1">Projects</a></li>
+                        <li class="li"><a href="#blogs">Blogs</a></li>
+                        <li class="li"><a href="#about">About me</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,57 +156,67 @@
                 <div class="wip">
                     <img src="./assets/project/WIP.png" alt="Project is work in progress">
                 </div>
-                <div class="section-body">
-                    <div class="project-name">
-                        <h3>HomeStyles</h3>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-img">
-                            <!-- <img src="./assets/project/homestyles.png" alt="Pixelated img of HomeStyles project"> -->
+                <div class="project-name">
+                    <h3>HomeStyles</h3>
+                </div>
+                <div class="project-img">
+                </div>
+                <div class="project-description">
+                    <div class="desc-group">
+                        <h3 class="h3">Description</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/question-mark.png" alt="">
+                                <p class="p">
+                                    E-commerce website for a furniture business
+                                </p>
+                            </div>
                         </div>
-                        <div class="project-description">
-                            <div class="desc-group">
-                                <h3 class="h3">Description</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/question-mark.png" alt="">
-                                        <p class="p">
-                                            E-commerce website for a furniture business
-                                        </p>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="desc-group">
+                        <h3 class="h3">What i did</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Design using <span class="accent">Figma</span>
+                                </p>
                             </div>
-                            <div class="desc-group">
-                                <h3 class="h3">What i did</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Design using <span class="accent">Figma</span>
-                                        </p>
-                                    </div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Development using using <span class="accent">HTML5</span> and
-                                            <span class="accent">CSS3</span>
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Development using <span class="accent">HTML5</span> and
+                                    <span class="accent">CSS3</span>
+                                </p>
                             </div>
-                            <button class="button">
-                                <a href="https://github.com/kajal-singh5/homestyle" target="_blank">
-                                    Visit site
-                                </a>
-                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="project-links">
+                    <button class="button">
+                        <a href="https://www.figma.com/file/P59hD98MG1UYnj1ANIrao8/HomeStyles?type=design&node-id=0%3A1&mode=design&t=0FJeztKSMawGC2LZ-1"
+                            target="_blank">
+                            <i class="fa-brands fa-figma"></i>
+                            Figma
+                        </a>
+                    </button>
+                    <button class="button">
+                        <a href="https://github.com/kajal-singh5/homestyle" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </button>
+                    <!-- <button class="button">
+                        <a href="#" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            Visit site
+                        </a>
+                    </button> -->
+                </div>
         </section>
-        
+
         <section id="project-2" class="project two">
             <div class="bg stars two">
             </div>
@@ -212,56 +227,68 @@
                 <div class="wip">
                     <img src="./assets/project/WIP.png" alt="Project is work in progress">
                 </div>
-                <div class="section-body">
-                    <div class="project-name">
-                        <h3>GoManga</h3>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-img">
-                            <!-- <img src="./assets/project/homestyles.png" alt="Pixelated img of HomeStyles project"> -->
-                        </div>
-                        <div class="project-description">
-                            <div class="desc-group">
-                                <h3 class="h3">Description</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/question-mark.png" alt="">
-                                        <p class="p">
-                                            Mobile first online webcomics reading website
-                                        </p>
-                                    </div>
-                                </div>
+                <div class="project-name">
+                    <h3>GoManga</h3>
+                </div>
+                <div class="project-img">
+                </div>
+                <div class="project-description">
+                    <div class="desc-group">
+                        <h3 class="h3">Description</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/question-mark.png" alt="">
+                                <p class="p">
+                                    Mobile first online webcomics reading website
+                                </p>
                             </div>
-                            <div class="desc-group">
-                                <h3 class="h3">What i did</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Design using <span class="accent">Adobe XD</span>
-                                        </p>
-                                    </div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Development using using <span class="accent">Bootstrap5</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button">
-                                <a href="https://github.com/kajal-singh5/goManga" target="_blank">
-                                    Visit site
-                                </a>
-                            </button>
                         </div>
                     </div>
+                    <div class="desc-group">
+                        <h3 class="h3">What i did</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Design using <span class="accent">Adobe XD</span>
+                                </p>
+                            </div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Development using using <span class="accent">Bootstrap5</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project-links">
+                    <button class="button">
+                        <a href="https://www.figma.com/file/3Z3TZKYxZiKT2ajhLLyqlr/GoManga?type=design&node-id=1%3A2&mode=design&t=dA1l5Lo84r27b3ni-1"
+                            target="_blank">
+                            <i class="fa-brands fa-figma"></i>
+                            Figma
+                        </a>
+                    </button>
+                    <button class="button">
+                        <a href="https://github.com/kajal-singh5/goManga" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </button>
+                    <!-- <button class="button">
+                        <a href="" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            Visit site
+                        </a>
+                    </button> -->
                 </div>
             </div>
         </section>
-        
+
         <section id="project-3" class="project three">
             <div class="bg stars two">
             </div>
@@ -270,56 +297,59 @@
                     <img src="./assets/project/flying-plane.png" alt="Projects">
                 </div>
                 <div class="wip">
-                    <!-- <img src="./assets/project/WIP.png" alt="Project is work in progress"> -->
                 </div>
-                <div class="section-body">
-                    <div class="project-name">
-                        <h3>Regex Quiz</h3>
-                    </div>
-
-                    <div class="project-info">
-                        <div class="project-img">
-                        </div>
-                        <div class="project-description">
-                            <div class="desc-group">
-                                <h3 class="h3">Description</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/question-mark.png" alt="">
-                                        <p class="p">
-                                            Front-end based regex quiz created using <span class="accent">
-                                                HTML5
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
+                <div class="project-name">
+                    <h3>Regex Quiz</h3>
+                </div>
+                <div class="project-img">
+                </div>
+                <div class="project-description">
+                    <div class="desc-group">
+                        <h3 class="h3">Description</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/question-mark.png" alt="">
+                                <p class="p">
+                                    Front-end based regex quiz created using <span class="accent">
+                                        HTML5
+                                    </span>
+                                </p>
                             </div>
-                            <div class="desc-group">
-                                <h3 class="h3">What i did</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Create regex pattern questions
-                                        </p>
-                                    </div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Styled using custom <span class="accent">CSS3</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button">
-                                <a href="https://kajal-singh5.github.io/regexQuiz/" target="_blank">
-                                    Visit site
-                                </a>
-                            </button>
                         </div>
                     </div>
+                    <div class="desc-group">
+                        <h3 class="h3">What i did</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Create regex pattern questions
+                                </p>
+                            </div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Styled using custom <span class="accent">CSS3</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <button class="button">
+                        <a href="https://github.com/kajal-singh5/regexQuiz" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </button>
+                    <button class="button">
+                        <a href="https://kajal-singh5.github.io/regexQuiz/" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            Site
+                        </a>
+                    </button>
                 </div>
             </div>
         </section>
@@ -332,54 +362,66 @@
                     <img src="./assets/project/flying-plane.png" alt="Projects">
                 </div>
                 <div class="wip">
-                    <!-- <img src="./assets/project/WIP.png" alt="Project is work in progress"> -->
-                </div>
-                <div class="section-body">
-                    <div class="project-name">
-                        <h3>Android Static App with Weather Application</h3>
-                    </div>
 
-                    <div class="project-info">
-                        <div class="project-img">
-                        </div>
-                        <div class="project-description">
-                            <div class="desc-group">
-                                <h3 class="h3">Description</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/question-mark.png" alt="">
-                                        <p class="p">
-                                            Responsive Android Weather Application
-                                        </p>
-                                    </div>
-                                </div>
+                </div>
+                <div class="project-name">
+                    <h3>Android Static App with Weather Application</h3>
+                </div>
+                <div class="project-img">
+                </div>
+                <div class="project-description">
+                    <div class="desc-group">
+                        <h3 class="h3">Description</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/question-mark.png" alt="">
+                                <p class="p">
+                                    Responsive Android Weather Application
+                                </p>
                             </div>
-                            <div class="desc-group">
-                                <h3 class="h3">What i did</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Designed weather application using <span class="accent">Figma</span>
-                                        </p>
-                                    </div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Development using <span class="accent">HTML5</span> and <span class="accent">CSS3</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button">
-                                <a href="https://kajal-singh5.github.io/weatherApp/" target="_blank">
-                                    Visit site
-                                </a>
-                            </button>
                         </div>
                     </div>
+                    <div class="desc-group">
+                        <h3 class="h3">What i did</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Design using <span class="accent">Figma</span>
+                                </p>
+                            </div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Development using <span class="accent">HTML5</span> and <span
+                                        class="accent">CSS3</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <button class="button">
+                        <a href="https://www.figma.com/file/adqbOhRrMJxP3Du9gQebMF/WeatherApp?type=design&node-id=0%3A1&mode=design&t=vmbrLkL0DdIfJcGq-1"
+                            target="_blank">
+                            <i class="fa-brands fa-figma"></i>
+                            Figma
+                        </a>
+                    </button>
+                    <button class="button">
+                        <a href="https://github.com/kajal-singh5/weatherApp " target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </button>
+                    <button class="button">
+                        <a href="https://kajal-singh5.github.io/weatherApp/" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            Site
+                        </a>
+                    </button>
                 </div>
             </div>
         </section>
@@ -392,54 +434,65 @@
                     <img src="./assets/project/flying-plane.png" alt="Projects">
                 </div>
                 <div class="wip">
-                    <!-- <img src="./assets/project/WIP.png" alt="Project is work in progress"> -->
                 </div>
-                <div class="section-body">
-                    <div class="project-name">
-                        <h3>Interactive Drum Kit</h3>
-                    </div>
-
-                    <div class="project-info">
-                        <div class="project-img">
-                        </div>
-                        <div class="project-description">
-                            <div class="desc-group">
-                                <h3 class="h3">Description</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/question-mark.png" alt="">
-                                        <p class="p">
-                                            Responsive and Interactive Drum Kit
-                                        </p>
-                                    </div>
-                                </div>
+                <div class="project-name">
+                    <h3>Interactive Drum Kit</h3>
+                </div>
+                <div class="project-img">
+                </div>
+                <div class="project-description">
+                    <div class="desc-group">
+                        <h3 class="h3">Description</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/question-mark.png" alt="">
+                                <p class="p">
+                                    Responsive and Interactive Drum Kit
+                                </p>
                             </div>
-                            <div class="desc-group">
-                                <h3 class="h3">What i did</h3>
-                                <hr>
-                                <div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Designed drum kit using <span class="accent">Figma</span>
-                                        </p>
-                                    </div>
-                                    <div class="desc-item">
-                                        <img src="./assets/project/star.png" alt="">
-                                        <p class="p">
-                                            Development using <span class="accent">HTML5</span>, <span class="accent">CSS3</span> and <span class="accent">JavaScript</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button">
-                                <a href="https://kajal-singh5.github.io/drumKit/" target="_blank">
-                                    Visit site
-                                </a>
-                            </button>
                         </div>
                     </div>
+                    <div class="desc-group">
+                        <h3 class="h3">What i did</h3>
+                        <hr>
+                        <div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Design using <span class="accent">Figma</span>
+                                </p>
+                            </div>
+                            <div class="desc-item">
+                                <img src="./assets/project/star.png" alt="">
+                                <p class="p">
+                                    Development using <span class="accent">HTML5</span>, <span
+                                        class="accent">CSS3</span> and <span class="accent">JavaScript</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <button class="button">
+                        <a href="https://www.figma.com/file/Xc0Jcv0w4SI1jwdMIU91NN/Drum-Kit-V2?type=design&node-id=0%3A1&mode=design&t=t8zw25xl5cccx6Ov-1"
+                            target="_blank">
+                            <i class="fa-brands fa-figma"></i>
+                            Figma
+                        </a>
+                    </button>
+                    <button class="button">
+                        <a href="https://github.com/kajal-singh5/drumKit" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </button>
+                    <button class="button">
+                        <a href="https://kajal-singh5.github.io/drumKit" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            Site
+                        </a>
+                    </button>
                 </div>
             </div>
         </section>
@@ -661,10 +714,12 @@
             <div class="tech-stack">
                 <p class="moving-text-container">
                     <span class="moving-text-1">
-                        &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript &emsp;React &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript &emsp;React
+                        &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript &emsp;React &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript
+                        &emsp;React
                     </span>
                     <span class="moving-text-2">
-                        &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript &emsp;React &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript &emsp;React&emsp;
+                        &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript &emsp;React &emsp;HTML5 &emsp;CSS3 &emsp;JavaScript
+                        &emsp;React&emsp;
                     </span>
                 </p>
             </div>
@@ -966,47 +1021,41 @@
                     <img src="./assets/about/boat-banner.png" alt="About me">
                 </div>
                 <div class="section-body">
-                    <div class="intro-card">
-                        <div class="first">
-                            <div class="profile-container">
-                                <div class="photo-wrapper gradient">
-                                    <div class="profile">
-                                        <img src="./assets/about/profile.gif" alt="Kajal Singh Profile Photo">
-                                    </div>
-                                </div>
-                                <div class="social">
-                                    <div class="github">
-                                        <a href="#">
-                                            <img src="./assets/about/github.png" alt="Github Link">
-                                        </a>
-                                    </div>
-                                    <div class="linkedIn">
-                                        <a href="#">
-                                            <img src="./assets/about/linkedIn.png" alt="LinkedIn Link">
-                                        </a>
-                                    </div>
-                                    <div class="newton">
-                                        <a href="#">
-                                            <img src="./assets/about/newton.png" alt="Newton Link">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="photo">
+                        <div class="profile">
+                            <img src="./assets/about/profile.gif" alt="Kajal Singh Profile Photo">
                         </div>
-                        <div class="second">
-                            <hr>
-                            <p>
-                                Helloo from the other side !
-                            </p>
-                            <h3>
-                                I'm Kajal Singh
-                            </h3>
-                            <p>
-                                I’m a web designer and developer based in Delhi NCR, India. I love travelling the most.
-                                I build for the web and like to make things pretty.
-                            </p>
-                            <hr>
+                    </div>
+                    <div class="social">
+                        <div class="github">
+                            <a href="#">
+                                <img src="./assets/about/github.png" alt="Github Link">
+                            </a>
                         </div>
+                        <div class="linkedIn">
+                            <a href="#">
+                                <img src="./assets/about/linkedIn.png" alt="LinkedIn Link">
+                            </a>
+                        </div>
+                        <div class="newton">
+                            <a href="#">
+                                <img src="./assets/about/newton.png" alt="Newton Link">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="intro-para">
+                        <hr>
+                        <p>
+                            Helloo from the other side !
+                        </p>
+                        <h3>
+                            I'm Kajal Singh
+                        </h3>
+                        <p>
+                            I’m a web designer and developer based in Delhi NCR, India.
+                            I build for the web and like to make things pretty.
+                        </p>
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -1014,25 +1063,27 @@
 
         <section id="footer" class="footer">
             <div class="container">
-                <div class="thank-you">
-                    <!-- <h3 class="h3">Thank you for visiting !</h3> -->
-                    <img src="./assets/footer/board2.png" alt="Thank you for visiting">
-                </div>
-                <div class="to-top">
-                    <a href="#" class="footer-to-top">
-                        <img src="./assets/footer/crab2.png" alt="To Top">
-                    </a>
-                </div>
                 <ul class="footer-nav">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#project-1">Projects</a></li>
-                    <li><a href="#blogs">Blogs</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li class="button">
+                        <a href="#hero">Home</a>
+                    </li>
+                    <li class="button">
+                        <a href="#project-1">Projects</a>
+                    </li>
+                    <li class="button">
+                        <a href="#blogs">Blogs</a>
+                    </li>
+                    <li class="button">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="floating-button">
+                        <a href="#hero"></a>
+                    </li>
                 </ul>
             </div>
         </section>
     </div>
-    <script src="./scripts/script.js"></script>
+
 </body>
 
 </html>
