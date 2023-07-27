@@ -190,6 +190,7 @@
 
 @media (max-width: 576px) {
     .about {
+        background-image: url("../assets/about/bg-mobile.png");
         font-size: 1rem;
         height: 180vh;
     }

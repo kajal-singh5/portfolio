@@ -1,7 +1,12 @@
 #tech-stack,
-#email-me {
+#email-me,
+#email-me-2 {
     position: relative;
     height: 17.5vw;
+}
+
+#email-me-2 {
+    display: none;
 }
 
 .svg {
@@ -13,7 +18,8 @@
 }
 
 .tech-stack,
-.email-box {
+.email-box,
+.game-over {
     width: 300%;
     height: 18vw;
 
@@ -114,8 +120,11 @@
 }
 
 @media (max-width: 576px) {
-    #tech-stack,
     #email-me {
         display: none;
+    }
+
+    #email-me-2 {
+        display: block;
     }
 }

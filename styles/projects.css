@@ -1,7 +1,7 @@
 /* PROJECTS */
 .project {
     /* display */
-    background-image: url("../assets/project/bg.png"), linear-gradient(180deg, #4C86C2 0%, #3B6B9C 50.82%);
+    background-image: url("../assets/project/bg.png"), linear-gradient(180deg, #4C86C2 0%, #3B6B9C 55%, #3B6B9C 70%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -286,11 +286,12 @@ hr {
 /* || MEDIA */
 @media(max-width: 770px) {
     .project {
-        background-image: url("../assets/project/bg-tablet.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background-image: url("../assets/project/bg-tablet.png"), linear-gradient(180deg, #4C86C2 0%, #3B6B9C 55%, #3B6B9C 70%);
         height: 160vh;
+    }
+
+    .project.five {
+        background-image: url("../assets/project/bg-tablet-2.png"), linear-gradient(180deg, #4C86C2 0%, #3B6B9C 55%, #3B6B9C 70%);
     }
 
     .project .container {
@@ -337,15 +338,12 @@ hr {
 
 @media (max-width: 576px) {
     .project {
-        background-image: url("../assets/project/bg-mobile-1.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background-image: url("../assets/project/bg-mobile-1.png"), linear-gradient(180deg, #4C86C2 0%, #3B6B9C 55%, #3B6B9C 70%);
         height: 180vh;
     }
 
     .project.five {
-        background-image: url("../assets/project/bg-mobile-2.png");
+        background-image: url("../assets/project/bg-mobile-2.png"), linear-gradient(180deg, #4C86C2 0%, #3B6B9C 55%, #3B6B9C 70%);
     }
 }
 
