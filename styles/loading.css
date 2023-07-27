@@ -27,6 +27,20 @@
     position: relative;
 }
 
-.loading .bg:last-child {
+.loading .bg.planet-2 {
     align-self: flex-end;
+}
+
+.loading .loading-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .loading .loading-gif {
+        display: block;
+    }
 }

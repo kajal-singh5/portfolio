@@ -289,7 +289,7 @@ hr {
         background-image: url("../assets/project/bg-tablet.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         height: 160vh;
     }
 
@@ -340,7 +340,7 @@ hr {
         background-image: url("../assets/project/bg-mobile-1.png");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         height: 180vh;
     }
 
