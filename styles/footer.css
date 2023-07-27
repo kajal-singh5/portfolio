@@ -3,6 +3,8 @@
     /* dimensions */
     width: 100vw;
     height: 100vh;
+
+    position: relative;
 }
 
 .footer .container {
@@ -58,7 +60,7 @@
     width: 8rem;
     height: 8rem;
 
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 2rem;
     z-index: 9999;

@@ -1,9 +1,8 @@
 @font-face {
     font-family: '04b03';
-    src: url("../assets/font/m5x7.ttf") format("truetype");
-    src: url("../assets/font/m5x7.otf") format("opentype");
-    src: url("../assets/font/m5x7.woff") format("woff");
-    src: url("../assets/font/m5x7.woff2") format("woff2");
+    src: url("../assets/font/04B_03_.ttf") format("truetype");
+    src: url("../assets/font/04B_03_.otf") format("opentype");
+    src: url("../assets/font/04B_03_.woff") format("woff");
 }
 
 @font-face {
