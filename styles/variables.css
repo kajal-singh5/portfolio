@@ -1,3 +1,19 @@
+@font-face {
+    font-family: '04b03';
+    src: url("../assets/font/m5x7.ttf") format("truetype");
+    src: url("../assets/font/m5x7.otf") format("opentype");
+    src: url("../assets/font/m5x7.woff") format("woff");
+    src: url("../assets/font/m5x7.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'NotJamSlabSerif1';
+    src: url("../assets/font/NotJamSlabSerif1.ttf") format("truetype");
+    src: url("../assets/font/NotJamSlabSerif1.otf") format("opentype");
+    src: url("../assets/font/NotJamSlabSerif1.woff") format("woff");
+    src: url("../assets/font/NotJamSlabSerif1.woff2") format("woff2");
+}
+
 /* || VARIABLES */
 :root {
 
