@@ -1,0 +1,309 @@
+.nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    overflow: visible;
+}
+
+.nav-button {
+    position: relative;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+    background-image: linear-gradient(174deg, #d9d9d917 0%, #d9d9d93b 23.56%, #d9d9d91a 54.08%, #d9d9d92b 74.62%, #d9d9d914 100%), linear-gradient(168deg, #d9d9d924 0%, #d9d9d93b 23.56%, #d9d9d926 54.08%, #d9d9d933 74.62%, #d9d9d91c 100%);
+    box-shadow: 0px 8px 0px 0px #412220, 
+    0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
+    border-radius: 0.75rem / 1.5rem;
+    cursor: url("../assets/hand.svg"), auto;
+}
+
+.nav-button img {
+    height: 60%;
+    transition: opacity 0.5s ease-in;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+    top: 4px;
+    box-shadow: 0px 4px 0px 0px #412220,
+    0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
+}
+
+.nav-button:active {
+    top: 8px;
+    box-shadow: 0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
+}
+
+/* Opening map button */
+.open-modal {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    z-index: 1001;
+}
+
+.home {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    z-index: 1001;
+}
+
+/* Map */
+.modal {
+    /* position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+
+    /* dimensions */
+    width: 100vw;
+    height: 100vh;
+
+    /* display */
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    /* content */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Map contents & gifs */
+.modal-content,
+.modal-gif {
+    width: 806px;
+
+    /* position */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Map contents only */
+.modal-content {
+    /* dimensions */
+    height: 80%;
+
+    /* position */
+    z-index: 5;
+
+    /* animation */
+    opacity: 0;
+
+    /* contents */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    overflow: visible;
+}
+
+/* Closing map button */
+.close-modal {
+    position: absolute;
+    right: 5%;
+    z-index: 1000;
+}
+
+.close-modal.nav-button {
+    background-image: linear-gradient(174deg, #d9d9d917 0%, #d9d9d986 23.56%, #d9d9d978 54.08%, #d9d9d98a 74.62%, #d9d9d914 100%), linear-gradient(168deg, #d9d9d977 0%, #d9d9d97e 23.56%, #d9d9d97e 54.08%, #d9d9d983 74.62%, #d9d9d983 100%);
+    height: 4rem;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    top: -4%;
+    box-shadow: 0px 4px 0px 0px #412220,
+    0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
+}
+
+.close-modal:active {
+    top: -3%;
+    box-shadow: 0px 14px 0px 0px #41222026 inset, 
+    0px 8px 0px 0px #41222042 inset;
+}
+
+/* Page links */
+.internal-links {
+    /* width: auto; */
+    height: 60%;
+
+    /* content */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    overflow: visible;
+
+    /* position */
+    align-self: center;
+}
+
+.internal-links a {
+    /* display */
+    background: var(--color-off-white);
+    box-shadow: 0px 4px 0px 0px #301F23;
+    border: 2px solid var(--color-dark-neutral);
+    border-radius: 5px;
+
+    /* text */
+    color: var(--color-dark-neutral);
+    text-align: var(--text-align-center);
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-body);
+    line-height: var(--font-line-height-body);
+    letter-spacing: 3.6px;
+    text-transform: var(--text-transform-uppercase);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.internal-links a:hover {
+    position: relative;
+    top: 2px;
+    box-shadow: 0px 2px 0px 0px #301F23;
+}
+
+.internal-links a:active {
+    position: relative;
+    top: 4px;
+    box-shadow: none;
+}
+
+.internal-links a:first-child,
+.internal-links a:nth-child(3) {
+    align-self: flex-start;
+}
+
+.internal-links a:nth-child(2),
+.internal-links a:last-child {
+    align-self: flex-end;
+}
+
+/* Page buttons */
+.external-links {
+    /* content */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+    gap: 5rem;
+
+    /* position */
+    align-self: center;
+}
+
+.external-links a {
+    /* display */
+    border-radius: 20px;
+    border: 4px solid #301F23;
+    background: #69A5C9;
+    box-shadow: 0px 12px 0px 0px #6DABD0 inset, 0px 10px 0px 0px #74B4DB inset, 0px 6px 0px 0px #BBDCEE inset, 0px -8px 0px 0px #636A7F inset;
+    padding: 0.5rem 1rem;
+
+    /* text */
+    color: var(--color-accent);
+    text-align: var(--text-align-center);
+    text-shadow: var(--text-shadow-blue);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-h);
+    text-transform: var(--text-transform-uppercase);
+    letter-spacing: var(--font-letter-spacing-p);
+    text-decoration: none;
+
+    /* contents */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    /* dimensions */
+    height: 100%;
+}
+
+.external-links a:first-child img {
+    max-height: 50%;
+}
+
+.external-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Map gif only */
+.modal-gif {
+    /* dimensions */
+    max-width: 100%;
+    height: 100%;
+
+    /* display */
+    opacity: 0;
+    aspect-ratio: 1.55 / 1;
+}
+
+.modal-gif.opening {
+    z-index: 4;
+}
+
+.modal-gif.closing {
+    z-index: 3;
+}
+
+@media (max-width: 770px) {
+    .modal-gif.opening,
+    .modal-gif.closing {
+        display: none;
+    }
+
+    .modal-content,
+    .modal-gif {
+        width: 100%;
+    }
+
+    .modal-content {
+        flex-direction: row;
+    }
+
+    .internal-links {
+        gap: 1rem;
+        overflow: visible;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .internal-links a {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        border-radius: none;
+
+        color: var(--color-off-white);
+        font-size: var(--font-size-h2);
+        overflow: visible;
+
+        align-self: auto;
+    }
+
+    .internal-links a:hover {
+        color: var(--color-accent);
+        box-shadow: none;
+    }
+    
+    .external-links {
+        gap: 1rem;
+        overflow: visible;
+        flex-direction: column;
+    }
+}

@@ -14,22 +14,6 @@
     html {
         font-size: 14px;
     }
-
-    /* navigation */
-    .nav-button {
-        width: 4rem;
-        height: 4rem;
-    }
-
-    .internal-links {
-        gap: 7rem;
-        height: 55%;
-    }
-
-    .external-links {
-        gap: 3rem;
-    }
-
 }
 
 @media (max-width: 770px) {
@@ -44,50 +28,6 @@
 
     .blogs, .project {
         height: 150vh;
-    }
-
-    /* navigation */
-    .close-modal {
-        top: -10%;
-        right: -5%;
-    }
-
-    .close-modal:hover,
-    .close-modal:focus {
-        top: -9%;
-    }
-
-    .close-modal:active {
-        top: -8%;
-    }
-
-    .modal-gif.opening,
-    .modal-gif.closing {
-        display: none;
-    }
-
-    .internal-links {
-        gap: 2rem;
-        overflow: visible;
-        flex-direction: column;
-    }
-
-    .internal-links a {
-        background: transparent;
-        box-shadow: none;
-        border: none;
-        border-radius: none;
-
-        color: var(--color-off-white);
-        font-size: var(--font-size-h1);
-        overflow: visible;
-
-        align-self: auto;
-    }
-
-    .internal-links a:hover {
-        color: var(--color-accent);
-        box-shadow: none;
     }
 }
 
