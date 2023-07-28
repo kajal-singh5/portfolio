@@ -39,17 +39,17 @@ const internalLinkItems = internalLinks.children;
 const externalLinks = document.querySelector('.external-links');
 
 if (mediaQuery.matches) {
-    openModalButton.addEventListener('click', function() {
+    openModalButton.addEventListener('click', function () {
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
         modalContent.style.display = 'flex';
 
-        setTimeout(function() {
+        setTimeout(function () {
             modalContent.style.opacity = '1';
         }, 100);
     });
 
-    closeModalButton.addEventListener('click', function() {
+    closeModalButton.addEventListener('click', function () {
         modalContent.style.opacity = '0';
         modalContent.style.display = 'none';
         modal.style.display = 'none';
@@ -57,7 +57,7 @@ if (mediaQuery.matches) {
     });
 
     for (var i = 0; i < internalLinkItems.length; i++) {
-        internalLinkItems[i].addEventListener('click', function() {
+        internalLinkItems[i].addEventListener('click', function () {
             modalContent.style.opacity = '0';
             modalContent.style.display = 'none';
             modal.style.display = 'none';
@@ -65,51 +65,70 @@ if (mediaQuery.matches) {
         })
     }
 } else {
-    openModalButton.addEventListener('click', function() {
+    openModalButton.addEventListener('click', function () {
         modalGifOpening.src = './assets/nav/open-modal4.gif';
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
         modalGifOpening.style.opacity = '0.95';
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
             modalContent.style.opacity = '1';
         }, 1000);
-        
+
     });
 
-    closeModalButton.addEventListener('click', function() {
+    closeModalButton.addEventListener('click', function () {
         modalGifClosing.src = './assets/nav/close-modal4.gif';
         modalGifOpening.style.opacity = '0';
         modalGifClosing.style.opacity = '0.95';
-        
-        setTimeout(function() {
-          modalContent.style.opacity = '0';
-        }, 200);
-      
-        setTimeout(function() {
-          modalGifClosing.style.opacity = '0';
-          modalGifOpening.src = './assets/nav/open-modal4.gif';
-          modal.style.display = 'none';
-          document.body.style.overflow = 'auto';
-        }, 1500);
-      
-    });
 
-    for (var i = 0; i < internalLinkItems.length; i++) {
-        internalLinkItems[i].addEventListener('click', function() {
-            modalGifClosing.src = './assets/nav/close-modal4.gif';
-            modalGifOpening.style.opacity = '0';
-            modalGifClosing.style.opacity = '0.95';
-            
-            setTimeout(function() {
+        setTimeout(function () {
             modalContent.style.opacity = '0';
-            }, 200);
-        
-            setTimeout(function() {
+        }, 200);
+
+        setTimeout(function () {
             modalGifClosing.style.opacity = '0';
             modalGifOpening.src = './assets/nav/open-modal4.gif';
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
+        }, 1500);
+
+    });
+
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modalGifClosing.src = './assets/nav/close-modal4.gif';
+            modalGifOpening.style.opacity = '0';
+            modalGifClosing.style.opacity = '0.95';
+
+            setTimeout(function () {
+                modalContent.style.opacity = '0';
+            }, 200);
+
+            setTimeout(function () {
+                modalGifClosing.style.opacity = '0';
+                modalGifOpening.src = './assets/nav/open-modal4.gif';
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 1500);
+        }
+    });
+
+    for (var i = 0; i < internalLinkItems.length; i++) {
+        internalLinkItems[i].addEventListener('click', function () {
+            modalGifClosing.src = './assets/nav/close-modal4.gif';
+            modalGifOpening.style.opacity = '0';
+            modalGifClosing.style.opacity = '0.95';
+
+            setTimeout(function () {
+                modalContent.style.opacity = '0';
+            }, 200);
+
+            setTimeout(function () {
+                modalGifClosing.style.opacity = '0';
+                modalGifOpening.src = './assets/nav/open-modal4.gif';
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }, 1500);
         })
     }
